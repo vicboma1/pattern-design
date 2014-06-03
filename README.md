@@ -1,22 +1,13 @@
-Pattern Design
+Pattern Design in Game Domain (Java)
 ==============
 
-Pattern design for Java
+* Creational patterns
+  * ```Builder```
+  * ```Factory method```
 
+* Structural patterns
 
-```java
-Creational patterns
-```
+* Behavioral patterns
+  * ```Observer``` 
 
-```java
-Structural patterns
-```
-
-```java
-Behavioral patterns
-
-```
-
-```java
-Concurrency patterns
-```
+* Concurrency patterns
