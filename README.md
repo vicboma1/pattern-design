@@ -7,7 +7,7 @@ Pattern Design in Game Domain (Java)
 
 * Structural patterns
 
-* Behavioral patterns
-  * ```Observer``` 
-
+* [Behavioral patterns](https://github.com/victorakamon/pattern-design/tree/master/src/behavioral)
+  * ```Observer```
+  
 * Concurrency patterns
