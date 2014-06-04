@@ -14,12 +14,14 @@ public class Player implements Observer {
     private View view;
 
     public static Player create(Properties properties, StatusData<Observer> statusData, View view) {
-        return new PlayerBuilder<Observer>(properties,statusData,view).createPlayer();
+        return new PlayerBuilder<Observer>(properties, statusData, view).createPlayer();
     }
 
-    Player(Properties properties, StatusData statusData, View view)
-    {
-    	this.view = view;
+    public Player() {
+    }
+
+    Player(Properties properties, StatusData statusData, View view) {
+        this.view = view;
         this.properties = properties;
         this.statusData = statusData;
         this.statusData.add(this);
@@ -27,12 +29,12 @@ public class Player implements Observer {
 
     @Override
     public Boolean update(Integer attack, Integer health, String name) {
-    	final boolean isDead = (health <= 0);
-        return this.view.display(isDead,attack,health,name, this.properties.name());
+        final boolean isDead = (health <= 0);
+        return this.view.display(isDead, attack, health, name, this.properties.name());
     }
 
     @Override
-    public void set(Integer attack, Integer health){
+    public void set(Integer attack, Integer health) {
         setProperties(attack, health);
         setStatus();
     }
@@ -42,6 +44,6 @@ public class Player implements Observer {
     }
 
     private void setStatus() {
-        this.statusData.set(this.properties.attack(), this.properties.health(),this.properties.name());
+        this.statusData.set(this.properties.attack(), this.properties.health(), this.properties.name());
     }
 }

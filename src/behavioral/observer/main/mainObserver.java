@@ -1,4 +1,4 @@
-package behavioral.observer.test;
+package behavioral.observer.main;
 
 import org.junit.Test; 
 
@@ -27,11 +27,11 @@ public class mainObserver {
         
         final View viewEnemy1 = DisplayElement.create();
         final Properties enemy1Properties = Properties.create("Cannibal");
-        final Enemy enemy1 = Enemy.create(enemy1Properties, statusData,viewPlayer2);
+        final Enemy enemy1 = Enemy.create(enemy1Properties, statusData,viewEnemy1);
         
         final View viewEnemy2 = DisplayElement.create();
         final Properties enemy2Properties = Properties.create("Depredator");
-        final Enemy enemy2 = Enemy.create(enemy2Properties, statusData,viewPlayer2);
+        final Enemy enemy2 = Enemy.create(enemy2Properties, statusData,viewEnemy2);
         
         gaming(player1, player2, enemy1, enemy2);
         

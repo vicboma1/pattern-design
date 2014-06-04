@@ -17,6 +17,9 @@ public class Enemy implements Observer {
         return new EnemyBuilder<Observer>(properties, statusData, view).createEnemy();
     }
 
+    public Enemy() {
+    }
+
     Enemy(Properties properties, StatusData statusData, View view) {
         this.view = view;
         this.properties = properties;
