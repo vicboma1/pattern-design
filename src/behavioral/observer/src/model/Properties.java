@@ -1,24 +1,21 @@
 package behavioral.observer.src.model;
 
-import behavioral.observer.src.StatusData;
-
 /**
  * Created by vicboma on 03/06/14.
  */
 public class Properties {
 
-    private static final int INIT_ATTACK = 5;
-    private static final int INIT_HEALTH = 50;
+    public static final int INIT_ATTACK = 5;
+    public static final int INIT_HEALTH = 50;
 
     private String name;
     private Integer attack;
     private Integer health;
 
-    public static Properties create(String name)
-    {
-    	return new Properties(name);
+    public static Properties create(String name) {
+        return new Properties(name);
     }
-    
+
     Properties(String name) {
         this.name = name;
         this.attack = INIT_ATTACK;
@@ -40,12 +37,11 @@ public class Properties {
         this.attack(attack);
     }
 
-    private void attack(Integer attack){
+    private void attack(Integer attack) {
         this.attack = this.attack + attack;
     }
 
-    private void health(Integer health)
-    {
+    private void health(Integer health) {
         this.health = health;
     }
 

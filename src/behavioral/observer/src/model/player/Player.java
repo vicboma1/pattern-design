@@ -2,9 +2,7 @@ package behavioral.observer.src.model.player;
 
 import behavioral.observer.api.Observer;
 import behavioral.observer.api.View;
-import behavioral.observer.src.Observable;
 import behavioral.observer.src.StatusData;
-import behavioral.observer.src.model.Builder;
 import behavioral.observer.src.model.Properties;
 
 /**
@@ -28,9 +26,9 @@ public class Player implements Observer {
     }
 
     @Override
-    public void update(Integer attack, Integer health, String name) {
+    public Boolean update(Integer attack, Integer health, String name) {
     	final boolean isDead = (health <= 0);
-    	this.view.display(isDead,attack,health,name,this.properties.name());
+        return this.view.display(isDead,attack,health,name, this.properties.name());
     }
 
     @Override

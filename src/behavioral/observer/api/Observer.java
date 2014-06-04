@@ -5,6 +5,6 @@ package behavioral.observer.api;
  */
 public interface Observer {
     void set(Integer attack, Integer health);
-    void update(Integer attack, Integer health, String name);
+    Boolean update(Integer attack, Integer health, String name);
 }
 
