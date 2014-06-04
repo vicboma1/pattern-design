@@ -3,7 +3,9 @@ Pattern Design in Game Domain (Java)
 
 * Creational patterns
   * ```Builder```
-  * ```Factory method```
+  * ```Simple Factory
+  * ```Factory Method```
+  * ```Abstract Factory```
 
 * Structural patterns
 
