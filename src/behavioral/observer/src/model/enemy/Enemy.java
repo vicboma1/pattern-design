@@ -4,17 +4,22 @@ import behavioral.observer.api.Observer;
 import behavioral.observer.api.View;
 import behavioral.observer.src.StatusData;
 import behavioral.observer.src.model.Properties;
+import creational.simplefactory.api.ActorEnemy;
 
 /**
  * Created by vicboma on 03/06/14.
  */
-public class Enemy implements Observer {
+public class Enemy implements Observer, ActorEnemy {
     private Properties properties;
     private StatusData<Observer> statusData;
     private View view;
 
     public static Enemy create(Properties properties, StatusData<Observer> statusData, View view) {
         return new EnemyBuilder<Observer>(properties, statusData, view).createEnemy();
+    }
+
+    public static Enemy create() {
+        return new Enemy();
     }
 
     public Enemy() {
