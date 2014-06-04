@@ -1,7 +1,7 @@
 Pattern Design in Game Domain (Java)
 ==============
 
-* Creational patterns
+* [Creational patterns](https://github.com/victorakamon/pattern-design/tree/master/src/creational)
   * ```Builder```
   * ```Simple Factory```
   * ```Factory Method```
