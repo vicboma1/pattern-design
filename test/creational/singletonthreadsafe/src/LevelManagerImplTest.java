@@ -9,7 +9,7 @@ import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
-public class SceneManagerImplTest {
+public class LevelManagerImplTest {
 
     private SceneManager<Integer, Scene> sceneManager;
 
