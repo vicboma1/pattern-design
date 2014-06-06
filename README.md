@@ -6,6 +6,7 @@ Pattern Design in Game Domain (Java)
   * ```Simple Factory```
   * ```Factory Method```
   * ```Abstract Factory```
+  * ```Singleton```
 
 * Structural patterns
 
