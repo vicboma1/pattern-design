@@ -13,5 +13,6 @@ Pattern Design in Game Domain (Java)
 
 * [Behavioral patterns](https://github.com/victorakamon/pattern-design/tree/master/src/behavioral)
   * ```Observer```
+  * ```Command```
   
 * Concurrency patterns
