@@ -8,6 +8,7 @@ Pattern Design in Game Domain (Java)
   * ```Abstract Factory```
   * ```Singleton```
   * ```Singleton Thread-Safe```
+  * ```Prototype```
   
 * Structural patterns
 
