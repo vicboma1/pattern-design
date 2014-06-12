@@ -1,6 +1,6 @@
 package creational.prototype.src;
 
-import creational.prototype.api.Bullet;
+import creational.prototype.api.Projectile;
 
 import java.awt.geom.Point2D;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
  * Time: 13:29
  * To change this template use File | Settings | File Templates.
  */
-public class Gun<B extends Bullet> {
+public class Gun<B extends Projectile> {
     public static final int CHARGER_BULLETS = 10;
     private String name;
     private Boolean isActive;

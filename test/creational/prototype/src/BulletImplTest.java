@@ -1,7 +1,7 @@
-package creational.prototype;
+package creational.prototype.src;
 
-import creational.prototype.api.Bullet;
-import creational.prototype.src.BulletImpl;
+import creational.prototype.api.Projectile;
+import creational.prototype.src.model.BulletImpl;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +19,7 @@ import static junit.framework.Assert.assertNotSame;
  */
 public class BulletImplTest {
 
-    private Bullet militar;
+    private Projectile militar;
 
     @Before
     public void setUp() throws Exception {
@@ -46,7 +46,7 @@ public class BulletImplTest {
 
     @Test
     public void testClone() throws Exception {
-       final Bullet bulletClone = militar.clone();
-        assertNotSame("fail clone", bulletClone, militar);
+        final Projectile projectileClone = militar.clone();
+        assertNotSame("fail clone", projectileClone, militar);
     }
 }

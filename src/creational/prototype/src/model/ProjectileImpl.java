@@ -1,26 +1,32 @@
-package creational.prototype.src;
+package creational.prototype.src.model;
 
-import creational.prototype.api.Bullet;
+import creational.prototype.api.Projectile;
 
 import java.awt.geom.Point2D;
 
 /**
- * Created with IntelliJ IDEA.
- * User: vicboma
- * Date: 10/06/14
- * Time: 13:30
- * To change this template use File | Settings | File Templates.
+ * Created by vicboma on 13/06/14.
  */
-public class BulletImpl implements Bullet, Cloneable {
+public class ProjectileImpl implements Projectile, Cloneable {
 
     private String ref;
     private Integer damage;
     private Point2D.Double position;
 
-    public BulletImpl(String ref, Integer damage, Point2D.Double position) {
+    public ProjectileImpl() {
+
+    }
+
+    public ProjectileImpl(String ref, Integer damage, Point2D.Double position) {
+        this.configure(ref, damage, position);
+    }
+
+    @Override
+    public Projectile configure(String ref, Integer damage, Point2D.Double position) {
         this.ref = ref;
         this.damage = damage;
         this.position = position;
+        return this;
     }
 
     @Override
@@ -40,9 +46,8 @@ public class BulletImpl implements Bullet, Cloneable {
 
     @Override
     public void update(Point2D.Double position) {
-        for(double x = 0; x < 1280; x++)
-        {
-            this.position.setLocation(position.x+x, position.y);
+        for (double x = 0; x < 1280; x++) {
+            this.position.setLocation(position.x + x, position.y);
         }
     }
 
@@ -53,15 +58,16 @@ public class BulletImpl implements Bullet, Cloneable {
      * @return
      */
     @Override
-    public Bullet clone() {
-        Bullet bullet = null;
+    public Projectile clone() {
+        Projectile projectile = null;
         try {
-            bullet = (Bullet)super.clone();
+            projectile = (Projectile) super.clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-        finally {
-            return bullet;
+        } finally {
+            return projectile;
         }
     }
+
+
 }

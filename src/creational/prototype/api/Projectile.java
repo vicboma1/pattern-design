@@ -10,11 +10,12 @@ import java.io.Serializable;
  * Time: 13:30
  * To change this template use File | Settings | File Templates.
  */
-public interface Bullet extends Serializable
-{
+public interface Projectile extends Serializable {
+    Projectile configure(String ref, Integer damage, Point2D.Double position);
     String ref();
     Integer damage();
     Point2D.Double position();
     void update(Point2D.Double position);
-    Bullet clone();
+
+    Projectile clone();
 }
