@@ -1,4 +1,4 @@
-[Adapter/Wrapper pattern](http://en.wikipedia.org/wiki/Adapter_pattern)
+[Adapter / Wrapper pattern](http://en.wikipedia.org/wiki/Adapter_pattern)
 =================
 
 * The adapter design pattern is used when you want two different classes with incompatible interfaces to work together.
