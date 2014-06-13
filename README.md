@@ -10,6 +10,7 @@ Pattern Design in Game Domain (Java)
   * ```Singleton Thread-Safe```
   * ```Prototype```
   * ```Multiton```
+  * ```Multiton Double-checked locking Concurrent``` 
   
 * [Structural patterns](https://github.com/victorakamon/pattern-design/tree/master/src/structural)
   * ```Adapter/Wrapper```
