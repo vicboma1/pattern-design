@@ -18,4 +18,5 @@ Pattern Design in Game Domain (Java)
   * ```Command```
   * ```Adapter```
   
-* Concurrency patterns
+* [Concurrency patterns]()
+  * ```Double-checked locking```
