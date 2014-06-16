@@ -1,8 +1,14 @@
-[Double-Checked Locking pattern](https://github.com/victorakamon/pattern-design/blob/master/src/creational/singletonthreadsafe/src/SingletonThreadSafeImpl.java)
+[Double-Checked Locking pattern](http://www.javaworld.com/article/2074979/java-concurrency/double-checked-locking--clever--but-broken.html)
 =================
 
-* used to reduce the overhead of acquiring a lock by first testing the locking criterion (the "lock hint") 
+* Used to reduce the overhead of acquiring a lock by first testing the locking criterion (the "lock hint") 
   without actually acquiring the lock.
+
+Example
+```
+https://github.com/victorakamon/pattern-design/blob/master/src/creational/singletonthreadsafe
+https://github.com/victorakamon/pattern-design/tree/master/src/creational/multitondoublecheckedlocking
+```
 
 References
 ```
