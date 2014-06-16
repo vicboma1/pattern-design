@@ -11,6 +11,7 @@ Pattern Design in Game Domain (Java)
   * ```Prototype```
   * ```Multiton```
   * ```Multiton Double-checked locking Concurrent``` 
+  * ```Family Factory```
   
 * [Structural patterns](https://github.com/victorakamon/pattern-design/tree/master/src/structural)
   * ```Adapter/Wrapper```
@@ -21,3 +22,4 @@ Pattern Design in Game Domain (Java)
 
 * [Concurrency patterns](https://github.com/victorakamon/pattern-design/tree/master/src/concurrency)
   * ```Double-checked locking```
+  * ```Execute Pool Sync```
