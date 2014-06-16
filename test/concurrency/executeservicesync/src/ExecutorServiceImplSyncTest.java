@@ -80,4 +80,25 @@ public class ExecutorServiceImplSyncTest {
         executorServiceSyncSpy.submit(task);
         verify(executorServiceSyncSpy).submit(task);
     }
+
+    @Test
+    public void testSubmitCallableVerify() throws Exception {
+        final ExecutorServiceSync executorServiceSyncSpy = spy(executorServiceSync);
+        final Boolean expectedResult = true;
+        final Runnable task = () -> {
+            System.out.println("I am execute");
+        };
+        executorServiceSyncSpy.submit(task, expectedResult);
+        verify(executorServiceSyncSpy).submit(task, expectedResult);
+    }
+
+    @Test
+    public void testSubmitCallable() throws Exception {
+        final Boolean expectedResult = true;
+        final Runnable task = () -> {
+            System.out.println("I am execute");
+        };
+        final Boolean submit = executorServiceSync.submit(task, expectedResult);
+        assertEquals("fail submit", expectedResult, submit);
+    }
 }
