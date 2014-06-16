@@ -24,3 +24,4 @@ Pattern Design in Game Domain (Java)
   * ```Double-checked locking```
   * ```Execute Service Sync```
   * ```Execute Service ASync```
+  * ```Thread Pool / Priority Queue Async```

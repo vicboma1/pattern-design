@@ -13,13 +13,13 @@ import java.util.concurrent.TimeUnit;
  */
 public class ExecutorServiceImplSync implements ExecutorServiceSync {
 
-    private java.util.concurrent.ExecutorService executorPool;
+    protected java.util.concurrent.ExecutorService executorPool;
 
     public static ExecutorServiceSync create(java.util.concurrent.ExecutorService executorService) {
         return new ExecutorServiceImplSync(executorService);
     }
 
-    ExecutorServiceImplSync(java.util.concurrent.ExecutorService executorService) {
+    protected ExecutorServiceImplSync(java.util.concurrent.ExecutorService executorService) {
         this.executorPool = executorService;
     }
 
