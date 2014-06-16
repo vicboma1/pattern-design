@@ -4,7 +4,7 @@
 * Used to reduce the overhead of acquiring a lock by first testing the locking criterion (the "lock hint") 
   without actually acquiring the lock.
 
-Example
+Examples
 ```
 https://github.com/victorakamon/pattern-design/blob/master/src/creational/singletonthreadsafe
 https://github.com/victorakamon/pattern-design/tree/master/src/creational/multitondoublecheckedlocking
