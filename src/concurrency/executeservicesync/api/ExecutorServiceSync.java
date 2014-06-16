@@ -12,11 +12,11 @@ public interface ExecutorServiceSync {
 
     List<java.lang.Runnable> shutdownNow();
 
-    boolean isShutdown();
+    Boolean isShutdown();
 
-    boolean isTerminated();
+    Boolean isTerminated();
 
-    boolean awaitTermination(long timeout, TimeUnit unit) throws InterruptedException;
+    Boolean awaitTermination(long timeout, TimeUnit unit) throws InterruptedException;
 
     void submit(Runnable task);
 }

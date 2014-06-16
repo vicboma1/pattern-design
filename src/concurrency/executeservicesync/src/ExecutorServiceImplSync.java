@@ -33,17 +33,17 @@ public class ExecutorServiceImplSync implements ExecutorServiceSync {
     }
 
     @Override
-    public boolean isShutdown() {
+    public Boolean isShutdown() {
         return executorPool.isShutdown();
     }
 
     @Override
-    public boolean isTerminated() {
+    public Boolean isTerminated() {
         return executorPool.isTerminated();
     }
 
     @Override
-    public boolean awaitTermination(long timeout, TimeUnit unit) throws InterruptedException {
+    public Boolean awaitTermination(long timeout, TimeUnit unit) throws InterruptedException {
         return executorPool.awaitTermination(timeout, unit);
     }
 
