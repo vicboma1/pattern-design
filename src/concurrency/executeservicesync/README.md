@@ -1,4 +1,4 @@
-[Execute Service Sync Factory pattern](http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html)
+[Execute Service Sync pattern](http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html)
 =================
 
 * Represents an synchronous execution mechanism which is runnable of executing tasks. 
