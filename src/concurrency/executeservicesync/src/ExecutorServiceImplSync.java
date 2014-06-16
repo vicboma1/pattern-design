@@ -1,6 +1,6 @@
-package concurrency.executepoolsync.src;
+package concurrency.executeservicesync.src;
 
-import concurrency.executepoolsync.api.ExecutorServiceSync;
+import concurrency.executeservicesync.api.ExecutorServiceSync;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -10,15 +10,15 @@ import java.util.concurrent.TimeUnit;
  * Created by vicboma on 16/06/14.
  * Based on Adapter pattern.
  */
-public class ExecutorPoolImplSync implements ExecutorServiceSync {
+public class ExecutorServiceImplSync implements ExecutorServiceSync {
 
     private java.util.concurrent.ExecutorService executorPool;
 
     public static ExecutorServiceSync create(java.util.concurrent.ExecutorService executorService) {
-        return new ExecutorPoolImplSync(executorService);
+        return new ExecutorServiceImplSync(executorService);
     }
 
-    ExecutorPoolImplSync(java.util.concurrent.ExecutorService executorService) {
+    ExecutorServiceImplSync(java.util.concurrent.ExecutorService executorService) {
         this.executorPool = executorService;
     }
 
