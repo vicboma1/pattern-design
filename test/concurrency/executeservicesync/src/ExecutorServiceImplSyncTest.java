@@ -33,7 +33,6 @@ public class ExecutorServiceImplSyncTest {
 
     @Test
     public void testShutdownNow() throws Exception {
-
         final int expected = 0;
 
         for (int i = 0; i < 100; i++)

@@ -4,6 +4,7 @@ import creational.prototype.api.Projectile;
 
 import java.awt.geom.Point2D;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -29,9 +30,11 @@ public class Gun<B extends Projectile> {
     public Boolean shoot(Point2D.Double movement) {
         Boolean result = isActive();
         if (result) {
-            final int size = this.bullet.size();
-            for (int i = 0; i < size; i++)
-                this.bullet.get(i).update(movement);
+            final Consumer<B> action = e -> e.update(movement);
+
+            bullet.stream()
+                    .sequential()
+                    .forEach(action);
 
             this.bullet.clear();
         }

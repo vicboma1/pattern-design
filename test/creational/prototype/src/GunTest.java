@@ -36,7 +36,7 @@ public class GunTest {
         Projectile projectile = new BulletImpl(".357", 50, new Point2D.Double(0.0, 0.0));
         for (int i = 0; i < bulletSize; i++) {
             projectile = projectile.clone();
-            projectileList.add(i, projectile);
+            projectileList.add(projectile);
         }
     }
 

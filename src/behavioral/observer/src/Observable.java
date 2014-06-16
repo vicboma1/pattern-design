@@ -27,13 +27,7 @@ public abstract class Observable<E extends Observer> {
     }
 
     public void notification(Integer attack, Integer health, String name) {
-        // this.observers.forEach((k,v) -> v.update());
-        final int size = this.observers.size();
-        for (int i = 0; i < size; i++) {
-            final E element = get(i);
-            element.update(attack, health, name);
-        }
-
+        this.observers.stream().sequential().forEach(e -> e.update(attack, health, name));
         System.out.println();
     }
 

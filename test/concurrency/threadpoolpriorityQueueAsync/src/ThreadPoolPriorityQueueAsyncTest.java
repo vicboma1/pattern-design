@@ -33,7 +33,6 @@ public class ThreadPoolPriorityQueueAsyncTest {
 
     @Test(timeout = 5000)
     public void execute() throws Exception {
-        final Integer expected = 100;
         for (int i = 0; i < 100; i++) {
             final Integer iter = i;
             threadPoolPriorityQueueAsync.addTask(() -> new Integer(iter));

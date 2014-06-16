@@ -35,21 +35,22 @@ public class CoreExecuting {
                             return;
                         }
 
-                        final int size = priorityQueue.size();
-                        for (int i = 0; i < size; i++) {
-                            final Callable poll = priorityQueue.poll();
-
-                            try {
-                                _threadPoolExecutor.submit(poll);
-                            } catch (RejectedExecutionException e) {
-                                System.out.println("Taks Rejected " + (resolved++));
-                                priorityQueue.add(poll);
-                            } finally {
-                                System.out.println("Taks Resolved " + (resolved++));
-                                sleep(5);
-                            }
-                        }
-
+                        priorityQueue
+                                .stream()
+                                .parallel()
+                                .forEach(element -> {
+                                            try {
+                                                priorityQueue.poll();
+                                                _threadPoolExecutor.submit(element);
+                                            } catch (RejectedExecutionException e) {
+                                                System.out.println("Taks Rejected " + (resolved++));
+                                                priorityQueue.add(element);
+                                            } finally {
+                                                System.out.println("Taks Resolved " + (resolved++));
+                                                sleep(5);
+                                            }
+                                        }
+                                );
                     }
 
                     private void sleep(Integer time) {
