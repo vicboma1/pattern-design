@@ -5,4 +5,6 @@ package concurrency.executeservicesync.api;
  */
 public interface ExecutorServiceSync extends AbstractExecutorService {
     void submit(Runnable task);
+
+    <T> T submit(Runnable task, T result);
 }
