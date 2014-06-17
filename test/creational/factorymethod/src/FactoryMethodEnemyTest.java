@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.IntStream;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,14 +17,13 @@ public class FactoryMethodEnemyTest {
     public void testCreateActor() throws Exception {
         final int expected = 100;
         Set<ActorEnemy> players = new HashSet<ActorEnemy>();
-
-        final int endIterator = expected;
-        for (int i = 0; i < endIterator; i++) {
-            final EnemyType enemyType = getType(i);
+        IntStream stream = IntStream.range(0, expected);
+        stream.sequential().forEach(e -> {
+            final EnemyType enemyType = getType(e);
             final ActorEnemy actor = FactoryMethodEnemy.createActor(enemyType);
             System.out.println("ActorEnemy instance "+actor.toString());
             players.add(actor);
-        }
+        });
 
         assertEquals("The object is duplicate!!!!", expected, players.size());
     }

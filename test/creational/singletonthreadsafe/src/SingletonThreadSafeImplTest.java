@@ -3,6 +3,8 @@ package creational.singletonthreadsafe.src;
 import creational.singletonthreadsafe.api.SceneManager;
 import org.junit.Test;
 import java.util.*;
+import java.util.stream.IntStream;
+
 import static org.junit.Assert.assertEquals;
 
 public class SingletonThreadSafeImplTest {
@@ -21,22 +23,20 @@ public class SingletonThreadSafeImplTest {
     @Test(timeout=15000)
     public void testSceneManagerLockResolved() throws Exception {
 
-        for (int i = 0; i < 100; i++) {
-            final int index = i;
-            Timer timer = new Timer("Timer_" + index);
+        IntStream stream = IntStream.range(0, 100);
+        stream.sequential().forEach(e -> {
+            Timer timer = new Timer("Timer_" + e);
             timer.scheduleAtFixedRate(
                     new TimerTask() {
                         @Override
                         public void run() {
-                            assertSceneManagerThreadSafe(index);
+                            assertSceneManagerThreadSafe(e);
                         }
                     },
                     DELAY,
                     TIMER
             );
-
-           // assertSceneManagerThreadSafe(index);
-        }
+        });
     }
 
     private void assertSceneManagerThreadSafe(Integer index) {

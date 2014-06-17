@@ -8,6 +8,7 @@ import org.junit.Test;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -33,11 +34,11 @@ public class GunTest {
     }
 
     private void prepareBullet(Integer bulletSize) {
-        Projectile projectile = new BulletImpl(".357", 50, new Point2D.Double(0.0, 0.0));
-        for (int i = 0; i < bulletSize; i++) {
-            projectile = projectile.clone();
-            projectileList.add(projectile);
-        }
+        final Projectile projectile = new BulletImpl(".357", 50, new Point2D.Double(0.0, 0.0));
+        IntStream stream = IntStream.range(0, bulletSize);
+        stream.sequential().forEach(e -> {
+            projectileList.add(projectile.clone());
+        });
     }
 
     @Test

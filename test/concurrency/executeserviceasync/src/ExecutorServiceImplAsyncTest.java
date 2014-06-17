@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.*;
+import java.util.stream.IntStream;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -43,10 +44,14 @@ public class ExecutorServiceImplAsyncTest {
 
         final int expected = 0;
 
-        for (int i = 0; i < 100; i++)
-            executorServiceAsync.submit(() -> {
-                System.out.println("I am execute Async");
-            });
+        IntStream stream = IntStream.range(0, 100);
+        stream.sequential()
+                .forEach(
+                        e -> executorServiceAsync.submit(() -> {
+                                    System.out.println("I am execute Async " + e);
+                                }
+                        )
+                );
 
         final List<Runnable> runnables = executorServiceAsync.shutdownNow();
 
@@ -151,9 +156,23 @@ public class ExecutorServiceImplAsyncTest {
 
         final List<Future<Integer>> futures = executorServiceAsync.invokeAll(collects);
 
-        final int size = futures.size();
-        for (int i = 0; i < size; i++)
-            assertEquals("fail invokeAll", results.get(i), futures.get(i).get());
+        IntStream stream = IntStream.range(0, futures.size());
+        stream
+                .sequential()
+                .forEach(
+                        e ->
+                        {
+                            final Future<Integer> integerFuture = futures.get(e);
+                            try {
+                                assertEquals("fail invokeAll", results.get(e).intValue(), integerFuture.get().intValue());
+                            } catch (InterruptedException e1) {
+                                e1.printStackTrace();
+                            } catch (ExecutionException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                );
+
     }
 
     @Test(timeout = 3000)
@@ -193,11 +212,22 @@ public class ExecutorServiceImplAsyncTest {
 
         final List<Future<Integer>> futures = executorServiceAsync.invokeAll(collects, 2000L, TimeUnit.MILLISECONDS);
 
-        final int size = futures.size();
-        for (int i = 0; i < size; i++)
-            assertEquals("fail invokeAll", results.get(i), futures.get(i).get());
-
-
+        IntStream stream = IntStream.range(0, futures.size());
+        stream
+                .sequential()
+                .forEach(
+                        e ->
+                        {
+                            final Future<Integer> integerFuture = futures.get(e);
+                            try {
+                                assertEquals("fail invokeAll", results.get(e).intValue(), integerFuture.get().intValue());
+                            } catch (InterruptedException e1) {
+                                e1.printStackTrace();
+                            } catch (ExecutionException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                );
     }
 
     @Test(timeout = 4000)

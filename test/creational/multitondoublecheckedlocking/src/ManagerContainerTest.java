@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.stream.IntStream;
 
 import static org.junit.Assert.assertEquals;
 
@@ -37,10 +38,9 @@ public class ManagerContainerTest {
 
     @Test(timeout = 15000)
     public void testSceneManagerLockResolved() throws Exception {
-
-        for (int i = 0; i < 100; i++) {
-            final int index = i;
-            Timer timer = new Timer("Timer_" + index);
+        IntStream stream = IntStream.range(0, 100);
+        stream.parallel().forEach(e -> {
+            Timer timer = new Timer("Timer_" + e);
             timer.scheduleAtFixedRate(
                     new TimerTask() {
                         @Override
@@ -55,6 +55,6 @@ public class ManagerContainerTest {
                     DELAY,
                     TIMER
             );
-        }
+        });
     }
 }
