@@ -13,6 +13,7 @@ Pattern Design in Game Domain (Java)
   * ```Multiton Double-checked locking Concurrent``` 
   * ```Family Factory```
   * ```Object Pool```
+  * ```Lazy Initialization```
   
 * [Structural patterns](https://github.com/victorakamon/pattern-design/tree/master/src/structural) / [Test](https://github.com/victorakamon/pattern-design/tree/master/test/structural)
   * ```Adapter/Wrapper```
