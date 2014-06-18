@@ -14,5 +14,5 @@ Lazy - new creational.abstractfactory.src.concreteFactory.Game3D
 
 References:
 
-http://kaliko.com/blog/lazy-loading-in-c-net/
-http://www.javaworld.com/article/2077568/learn-java/java-tip-67--lazy-instantiation.html
+* http://kaliko.com/blog/lazy-loading-in-c-net/
+* http://www.javaworld.com/article/2077568/learn-java/java-tip-67--lazy-instantiation.html
