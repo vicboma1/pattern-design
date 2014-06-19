@@ -28,6 +28,11 @@ public class Vector2DImpl implements Vector2D {
         this.point2d = new Point2D.Double(x, y);
     }
 
+    public Vector2DImpl(Double x) {
+        this.point2d = new Point2D.Double(x, x);
+    }
+
+
     @Override
     public void set(Double x, Double y) {
         this.point2d.setLocation(x, y);
@@ -67,6 +72,14 @@ public class Vector2DImpl implements Vector2D {
         final double y = this.point2d.y - vector2D.y();
         return new Vector2DImpl(x, y);
     }
+
+    @Override
+    public Vector2D dot(Vector2D vector2D) {
+        final double x = this.point2d.x * vector2D.x();
+        final double y = this.point2d.y * vector2D.y();
+        return new Vector2DImpl(x, y);
+    }
+
 
     @Override
     public Vector2D times(Double scalar) {
