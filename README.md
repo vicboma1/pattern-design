@@ -17,6 +17,7 @@ Pattern Design in Game Domain (Java)
   
 * [Structural patterns](https://github.com/victorakamon/pattern-design/tree/master/src/structural) / [Test](https://github.com/victorakamon/pattern-design/tree/master/test/structural)
   * ```Adapter/Wrapper```
+  * ```Flyweight```
 
 * [Behavioral patterns](https://github.com/victorakamon/pattern-design/tree/master/src/behavioral) / [Test](https://github.com/victorakamon/pattern-design/tree/master/test/behavioral)
   * ```Observer```
@@ -35,3 +36,5 @@ Pattern Design in Game Domain (Java)
   * Kent Beck, Ward Cunningham. http://c2.com/doc/oopsla87.html
   * Martin, Robert C. http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf
   * Fowler, Martin. http://www.martinfowler.com/articles/writingPatterns.html
+  * Staffan Bjork, Jussi Holopainen. Patterns in game design (Book).
+   
