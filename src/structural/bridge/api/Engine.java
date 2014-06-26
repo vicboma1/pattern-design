@@ -3,10 +3,11 @@ package structural.bridge.api;
 /**
  * Created by vicboma on 25/06/14.
  */
-public interface Motor {
-    Boolean start();
-
+public interface Engine {
+    void start();
     void inject(Double combustion);
 
-    Boolean stop();
+    void stop();
+
+    Boolean isStart();
 }
