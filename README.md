@@ -18,11 +18,12 @@ Pattern Design in Game Domain (Java)
 * [Structural patterns](https://github.com/victorakamon/pattern-design/tree/master/src/structural) / [Test](https://github.com/victorakamon/pattern-design/tree/master/test/structural)
   * ```Adapter/Wrapper```
   * ```Flyweight```
+  * ```Bridge```
 
 * [Behavioral patterns](https://github.com/victorakamon/pattern-design/tree/master/src/behavioral) / [Test](https://github.com/victorakamon/pattern-design/tree/master/test/behavioral)
   * ```Observer```
   * ```Command```
-  * ```Bridge```
+  
 
 * [Concurrency patterns](https://github.com/victorakamon/pattern-design/tree/master/src/concurrency) / [Test](https://github.com/victorakamon/pattern-design/tree/master/test/concurrency)
   * ```Double-checked locking```
