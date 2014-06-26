@@ -19,6 +19,7 @@ Pattern Design in Game Domain (Java)
   * ```Adapter/Wrapper```
   * ```Flyweight```
   * ```Bridge```
+  * ```Composite```
 
 * [Behavioral patterns](https://github.com/victorakamon/pattern-design/tree/master/src/behavioral) / [Test](https://github.com/victorakamon/pattern-design/tree/master/test/behavioral)
   * ```Observer```
