@@ -20,6 +20,7 @@ Pattern Design in Game Domain (Java)
   * ```Flyweight```
   * ```Bridge```
   * ```Composite```
+  * ```Front Controller```
 
 * [Behavioral patterns](https://github.com/victorakamon/pattern-design/tree/master/src/behavioral) / [Test](https://github.com/victorakamon/pattern-design/tree/master/test/behavioral)
   * ```Observer```
