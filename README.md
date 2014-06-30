@@ -33,6 +33,8 @@ Pattern Design in Game Domain (Java)
   * ```Execute Service ASync```
   * ```Thread Pool / Priority Queue Async```
 
+* [Sequential patterns](https://github.com/victorakamon/sequential-patterns) / [Test](https://github.com/victorakamon/sequential-patterns/tree/master/test)
+  * ```Game loop core```
 
 
   References:
