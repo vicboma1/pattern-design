@@ -35,6 +35,7 @@ Pattern Design in Game Domain (Java)
 
 * [Sequential patterns](https://github.com/victorakamon/sequential-patterns) / [Test](https://github.com/victorakamon/sequential-patterns/tree/master/test)
   * ```Game loops core```
+  * ```Double Buffer```
 
 
   References:
