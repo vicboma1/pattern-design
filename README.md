@@ -38,7 +38,7 @@ Pattern Design in Game Domain (Java)
   * ```Double Buffer```
   * ```Update method```
 
-* [Cleanup pattern](https://github.com/victorakamon/pattern-design/tree/master/src/cleanup/dispose)
+* [Cleanup pattern](https://github.com/victorakamon/pattern-design/tree/master/src/cleanup)
   * ```Dispose```
 
 
