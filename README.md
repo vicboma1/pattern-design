@@ -38,6 +38,10 @@ Pattern Design in Game Domain (Java)
   * ```Double Buffer```
   * ```Update method```
 
+* [Cleanup pattern](https://github.com/victorakamon/emulators/tree/master/chip8/src/emulator/dispose)
+  * ```Dispose```
+
+
 
   References:
   * Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. http://en.wikipedia.org/wiki/Design_Patterns_(book)

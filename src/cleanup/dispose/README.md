@@ -1,4 +1,4 @@
-[Disposable pattern](http://en.wikipedia.org/wiki/Dispose_pattern)
+[Dispose pattern](http://en.wikipedia.org/wiki/Dispose_pattern)
 =================
 
 * In computer programming, the dispose pattern is a design pattern which is used to handle resource cleanup and prevent 
