@@ -8,9 +8,10 @@ Reference
 http://www.yoda.arachsys.com/csharp/threads/threadpool.shtml
 ```
 
-Used with a best implementation
-```              
+Others examples
+```            
 http://www.mundijuegos.com.mx/multijugador/knockout-bingo/
+https://github.com/victorakamon/emulators/tree/master/chip8/src/core
 ```
 
 ```
