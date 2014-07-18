@@ -67,7 +67,7 @@ http://www.yoda.arachsys.com/csharp/threads/threadpool.shtml
 Others examples
 ```            
 http://www.mundijuegos.com.mx/multijugador/knockout-bingo/
-https://github.com/victorakamon/emulators/tree/master/chip8/src/core
+https://github.com/vicboma1/emulators/tree/master/chip8/src/core
 ```
 
 
