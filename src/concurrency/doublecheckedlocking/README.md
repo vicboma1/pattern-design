@@ -6,8 +6,8 @@
 
 Examples
 ```
-https://github.com/victorakamon/pattern-design/blob/master/src/creational/singletonthreadsafe
-https://github.com/victorakamon/pattern-design/tree/master/src/creational/multitondoublecheckedlocking
+https://github.com/vicboma1/pattern-design/blob/master/src/creational/singletonthreadsafe
+https://github.com/vicboma1/pattern-design/tree/master/src/creational/multitondoublecheckedlocking
 ```
 
 References
