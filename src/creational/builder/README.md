@@ -6,7 +6,7 @@
 
 Example:
 ```
-https://github.com/victorakamon/pattern-design/blob/master/src/behavioral/observer/src/model/Builder.java
+https://github.com/vicboma1/pattern-design/blob/master/src/behavioral/observer/src/model/Builder.java
 ```
 
 Reference:
