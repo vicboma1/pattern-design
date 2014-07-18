@@ -6,7 +6,7 @@
 
 Examples
 ```
-https://github.com/victorakamon/emulators/tree/master/chip8/src/emulator/dispose
-https://github.com/victorakamon/emulators/blob/master/chip8/src/core/AsyncTask.java
+https://github.com/vicboma1/emulators/tree/master/chip8/src/emulator/dispose
+https://github.com/vicboma1/emulators/blob/master/chip8/src/core/AsyncTask.java
 ```
 
