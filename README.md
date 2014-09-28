@@ -1,4 +1,4 @@
-Pattern Design in Game Domain (Java)
+Pattern Design (Java)
 ==============
 
 * [Creational patterns](https://github.com/victorakamon/pattern-design/tree/master/src/creational) / [Test](https://github.com/victorakamon/pattern-design/tree/master/test/creational)
