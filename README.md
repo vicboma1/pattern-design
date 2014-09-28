@@ -41,7 +41,7 @@ Pattern Design in Game Domain (Java)
 * [Cleanup pattern](https://github.com/victorakamon/pattern-design/tree/master/src/cleanup)
   * ```Dispose```
 
-* [IoC Containers and Dependency injection ](https://github.com/vicboma1/Injector)
+* [IoC Containers and Dependency injection pattern ](https://github.com/vicboma1/Injector)
   * As Singleton
   * To Singleton
   * To Protoype
