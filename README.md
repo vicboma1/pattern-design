@@ -57,3 +57,7 @@ Pattern Design (Java)
   * Fowler, Martin. http://www.martinfowler.com/articles/writingPatterns.html
   * Staffan Bjork, Jussi Holopainen. Patterns in game design (Book).
    
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vicboma1/pattern-design/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
