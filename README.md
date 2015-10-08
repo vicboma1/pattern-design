@@ -1,5 +1,9 @@
 Pattern Design (Java)
 ==============
+[![Build Status](https://travis-ci.org/vicboma1/pattern-design.svg?branch=branch-develop)](https://travis-ci.org/vicboma1/pattern-design)
+[![Coverage Status](https://coveralls.io/repos/vicboma1/pattern-design/badge.svg?branch=master&service=github)](https://coveralls.io/github/vicboma1/pattern-design?branch=master)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vicboma1/pattern-design/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 * [Creational patterns](https://github.com/victorakamon/pattern-design/tree/master/src/creational) / [Test](https://github.com/victorakamon/pattern-design/tree/master/test/creational)
   * ```Builder```
@@ -59,7 +63,4 @@ Pattern Design (Java)
   * Staffan Bjork, Jussi Holopainen. Patterns in game design (Book).
    
 
-[![Build Status](https://travis-ci.org/vicboma1/pattern-design.svg?branch=branch-develop)](https://travis-ci.org/vicboma1/pattern-design)
-[![Coverage Status](https://coveralls.io/repos/vicboma1/pattern-design/badge.svg?branch=master&service=github)](https://coveralls.io/github/vicboma1/pattern-design?branch=master)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vicboma1/pattern-design/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
