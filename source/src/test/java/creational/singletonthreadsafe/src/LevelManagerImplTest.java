@@ -1,6 +1,6 @@
-package creational.singleton.src;
+package creational.singletonthreadsafe.src;
 
-import creational.singleton.api.SceneManager;
+import creational.singletonthreadsafe.api.SceneManager;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,11 +11,11 @@ import static org.mockito.Mockito.verify;
 
 public class LevelManagerImplTest {
 
-    private SceneManager<Integer,Scene> sceneManager;
+    private SceneManager<Integer, Scene> sceneManager;
 
     @Before
     public void setUp() throws Exception {
-        sceneManager = Singleton.sceneManager();
+        sceneManager = SingletonThreadSafeImpl.sceneManager();
     }
 
     @Test
@@ -58,10 +58,8 @@ public class LevelManagerImplTest {
     @Test
     public void testSize() throws Exception {
         final Scene expectedIntro = new Scene("Intro", null);
-        final Scene expectedGameOver = new Scene("GameOver", null);
 
         sceneManager.put(1, expectedIntro);
-        sceneManager.put(1, expectedGameOver);
         assertEquals("fail size", sceneManager.size(), new Integer(1));
 
         sceneManager.put(2, expectedIntro);
@@ -74,7 +72,7 @@ public class LevelManagerImplTest {
 
     @Test
     public void testDestroy() throws Exception {
-        SceneManager<Integer,Scene> sceneManagerSpy = spy(sceneManager);
+        SceneManager<Integer, Scene> sceneManagerSpy = spy(sceneManager);
         sceneManagerSpy.destroy();
         verify(sceneManagerSpy).destroy();
     }

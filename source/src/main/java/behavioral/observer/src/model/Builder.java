@@ -2,7 +2,6 @@ package behavioral.observer.src.model;
 
 import behavioral.observer.api.Observer;
 import behavioral.observer.api.View;
-import behavioral.observer.src.Observable;
 import behavioral.observer.src.StatusData;
 
 /**
