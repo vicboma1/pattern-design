@@ -15,6 +15,8 @@ public class Gasoline implements Engine {
 
     Gasoline(Stroke stroke) {
         this.stroke = stroke;
+        this.isRun = false;
+
     }
 
     @Override

@@ -37,7 +37,7 @@ public class VehicleTest {
 
     @Test
     public void testShowStatus() throws Exception {
-        Vehicle vehicleSpy = spy(vehicle);
+        Vehicle vehicleSpy =  spy(vehicle);
         vehicleSpy.showStatus();
         verify(vehicleSpy).showStatus();
     }

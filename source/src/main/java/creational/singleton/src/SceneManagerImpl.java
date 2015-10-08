@@ -31,7 +31,7 @@ public class SceneManagerImpl<K,V> implements SceneManager<K,V> {
     }
 
     @Override
-    public Integer size() {
+    public int size() {
         return mapScene.size();
     }
 

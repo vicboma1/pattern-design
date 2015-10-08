@@ -60,7 +60,9 @@ public abstract class ObjectPoolImpl<T> implements ObjectPool<T> {
     @Override
     public void checkIn(T t) {
         synchronized (this) {
-            locked.remove(t);
+            if(locked.containsKey(t))
+                locked.remove(t);
+
             unlocked.put(t, System.currentTimeMillis());
         }
 

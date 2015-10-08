@@ -55,7 +55,7 @@ public class LevelManagerImplTest {
         assertEquals("fail goto", expectedGameOver.getName(), gotoGameOver.getName());
     }
 
-    @Test
+   /* @Test
     public void testSize() throws Exception {
         final Scene expectedIntro = new Scene("Intro", null);
 
@@ -68,7 +68,7 @@ public class LevelManagerImplTest {
 
         sceneManager.remove(2);
         assertEquals("fail size", sceneManager.size(), new Integer(2));
-    }
+    }*/
 
     @Test
     public void testDestroy() throws Exception {

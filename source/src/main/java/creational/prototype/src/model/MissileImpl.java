@@ -15,7 +15,7 @@ public class MissileImpl implements Projectile {
     }
 
     public MissileImpl(String ref, Integer damage, Point2D.Double position) {
-        configure(ref, damage, position);
+        this.configure(ref, damage, position);
     }
 
     @Override
@@ -26,24 +26,29 @@ public class MissileImpl implements Projectile {
 
     @Override
     public String ref() {
-        return projectile.ref();
+        final String ref = projectile.ref();
+        return ref;
     }
 
     @Override
     public Integer damage() {
-        return projectile.damage();
+        final Integer damage = projectile.damage();
+        return damage;
     }
 
     @Override
     public Point2D.Double position() {
-        return projectile.position();
+        final Point2D.Double position = projectile.position();
+        return position;
     }
 
     @Override
     public void update(Point2D.Double position) {
         for (double x = 0; x < 1280; x++) {
-            this.projectile.position().setLocation(position.x + x, position.y);
+            final Point2D.Double position1 = this.projectile.position();
+            position1.setLocation(position.x + x, position.y);
         }
+
     }
 
     @Override

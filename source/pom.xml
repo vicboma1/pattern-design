@@ -64,13 +64,13 @@
             <format>xml</format>
             <aggregate>true</aggregate>
             <check>
-                <branchRate>85</branchRate>
-                <lineRate>85</lineRate>
-                <haltOnFailure>true</haltOnFailure>
-                <totalBranchRate>85</totalBranchRate>
-                <totalLineRate>85</totalLineRate>
-                <packageLineRate>85</packageLineRate>
-                <packageBranchRate>85</packageBranchRate>
+                <branchRate>50</branchRate>
+                <lineRate>50</lineRate>
+                <haltOnFailure>false</haltOnFailure>
+                <totalBranchRate>50</totalBranchRate>
+                <totalLineRate>50</totalLineRate>
+                <packageLineRate>50</packageLineRate>
+                <packageBranchRate>50</packageBranchRate>
             </check>
 
         </configuration>

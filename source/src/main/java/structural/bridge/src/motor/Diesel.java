@@ -15,6 +15,7 @@ public class Diesel implements Engine {
 
     Diesel(Stroke stroke) {
         this.stroke = stroke;
+        this.isRun = false;
     }
 
     @Override
