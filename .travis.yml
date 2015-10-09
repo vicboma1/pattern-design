@@ -18,7 +18,6 @@ jdk:
 # setup jobs.
 env:
   - USE_FRAMEBUFFER=true
-  - USE_FRAMEBUFFER=false _JAVA_OPTIONS="-Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dprism.order=sw -Dprism.text=t2k -Dtestfx.setup.timeout=2500"
 
 # run on xvfb screen.
 before_install:
