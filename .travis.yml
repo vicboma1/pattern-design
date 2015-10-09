@@ -11,6 +11,27 @@ cache:
 jdk:
   - oraclejdk8
 
+addons:
+  apt:
+    packages:
+    - python-qt4
+    - python-qt4-dev
+    - python-qt4-gl
+    - python-pip
+    - python-numpy
+    - python-wxtools
+    - ccache
+    - cmake
+    - swig
+    - zlib1g-dev
+    - libpng-dev
+    - libfreetype6-dev
+    - python-cairo
+env:
+  - ETS_TOOLKIT=wx
+  - ETS_TOOLKIT=qt4
+  - ETS_TOOLKIT=null.image
+
 before_install:
   # setup X11 for the tests
   - export DISPLAY=:99.0
