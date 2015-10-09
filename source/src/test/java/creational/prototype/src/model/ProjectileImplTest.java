@@ -1,9 +1,7 @@
-package creational.prototype.src;
+package creational.prototype.src.model;
 
 import creational.prototype.api.Projectile;
-import creational.prototype.src.model.BulletImpl;
 import junit.framework.Assert;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,34 +11,24 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
 /**
- * Created with IntelliJ IDEA.
- * User: vicboma
- * Date: 10/06/14
- * Time: 13:43
- * To change this template use File | Settings | File Templates.
+ * Created by vicboma on 09/10/15.
  */
-public class BulletImplTest {
+public class ProjectileImplTest {
 
+    private Projectile projectile;
     private final String ref = "ref";
     private final int damage = 10;
     private final Point2D.Double position = new Point2D.Double(35, 54);
-    private Projectile projectile;
 
     @Before
     public void setUp() throws Exception {
-        projectile = new BulletImpl(".45", 5, new Point2D.Double(500.0, 123.0));
-    }
-
-    @After
-    public void tearDown() throws Exception {
-        projectile = null;
+        projectile = new ProjectileImpl();
     }
 
     @Test
     public void testConfigure() throws Exception {
-        Projectile missile = spy(projectile);
-        missile.configure(ref, damage, position);
-        verify(missile).configure(ref, damage, position);
+        final Projectile configure = projectile.configure(ref, damage, position);
+        Assert.assertEquals(configure, projectile);
     }
 
     @Test
@@ -77,4 +65,3 @@ public class BulletImplTest {
         Assert.assertSame(clone.getClass().getName(), expected);
     }
 }
-

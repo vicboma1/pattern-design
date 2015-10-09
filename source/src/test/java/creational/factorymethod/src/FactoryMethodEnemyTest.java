@@ -9,6 +9,8 @@ import java.util.Set;
 import java.util.stream.IntStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 public class FactoryMethodEnemyTest {
 
@@ -28,6 +30,12 @@ public class FactoryMethodEnemyTest {
         assertEquals("The object is duplicate!!!!", expected, players.size());
     }
 
+    @Test
+    public void testCreateActorNull() throws Exception {
+       final ActorEnemy actor = FactoryMethodEnemy.createActor(null);
+       assertNull("The object is not null!!!!", actor);
+    }
+
     private EnemyType getType(Integer i) {
         final int mod = i % 3;
         switch(mod)
@@ -37,5 +45,12 @@ public class FactoryMethodEnemyTest {
             case 2: return EnemyType.ULTRAENEMY;
             default: return null;
         }
+    }
+
+    @Test
+    public void testCreateInstance() throws Exception {
+        FactoryMethodEnemy factoryMethodEnemy = new FactoryMethodEnemy();
+        assertNotNull("Is null",factoryMethodEnemy);
+
     }
 }

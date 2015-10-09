@@ -5,6 +5,7 @@ import creational.abstractfactory.src.concreteFactory.Game3D;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class LazyInitializationTest {
 
@@ -34,4 +35,16 @@ public class LazyInitializationTest {
         final Game3D newGame3D2 = LazyInitialization.getObjectByClass(game3DClass2);
         assertEquals("fail creation", game3DClass2, newGame3D2.getClass());
     }
+
+    @Test
+    public void testInstantiationException() throws Exception {
+        final Number number = null;
+        try{
+            LazyInitialization.getObjectByClass(Number.class);
+        }catch(InstantiationException e){
+            assertNull("Creation instace", number);
+        }
+    }
+
+
 }

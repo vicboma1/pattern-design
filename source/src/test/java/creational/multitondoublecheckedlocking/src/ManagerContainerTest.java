@@ -1,16 +1,13 @@
 package creational.multitondoublecheckedlocking.src;
 
 import creational.multitondoublecheckedlocking.api.MultitonDoubleCheckedLocking;
-import creational.multitondoublecheckedlocking.src.model.AudioContainer;
-import creational.multitondoublecheckedlocking.src.model.MenuContainer;
-import creational.multitondoublecheckedlocking.src.model.SceneContainer;
 import org.junit.Test;
 
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.stream.IntStream;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class ManagerContainerTest {
 
@@ -56,5 +53,37 @@ public class ManagerContainerTest {
                     TIMER
             );
         });
+    }
+
+    @Test
+    public void testGetNotNull() throws Exception {
+        final MultitonDoubleCheckedLocking getAudioContainer = ManagerContainer.getInstance(AudioContainer.class);
+        assertNotNull("Create instance", getAudioContainer);
+    }
+
+    @Test
+    public void testGetInstantiationException() throws Exception {
+        MultitonDoubleCheckedLocking getAudioContainer = null;
+        try {
+            getAudioContainer = ManagerContainer.getInstance(MultitionAbstract.class);
+        }catch (InstantiationException e){
+            assertNull("Create instance", getAudioContainer);
+        }
+
+    }
+
+
+    public abstract class MultitionAbstract implements MultitonDoubleCheckedLocking { }
+    public class AudioContainer implements MultitonDoubleCheckedLocking {
+        public AudioContainer() {
+        }
+    }
+    public class MenuContainer implements MultitonDoubleCheckedLocking {
+        public MenuContainer() {
+        }
+    }
+    public class SceneContainer implements MultitonDoubleCheckedLocking {
+        public SceneContainer() {
+        }
     }
 }

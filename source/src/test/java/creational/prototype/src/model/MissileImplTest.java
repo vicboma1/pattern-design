@@ -1,7 +1,6 @@
-package creational.prototype.src;
+package creational.prototype.src.model;
 
 import creational.prototype.api.Projectile;
-import creational.prototype.src.model.BulletImpl;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
@@ -13,13 +12,9 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
 /**
- * Created with IntelliJ IDEA.
- * User: vicboma
- * Date: 10/06/14
- * Time: 13:43
- * To change this template use File | Settings | File Templates.
+ * Created by vicboma on 09/10/15.
  */
-public class BulletImplTest {
+public class MissileImplTest {
 
     private final String ref = "ref";
     private final int damage = 10;
@@ -28,7 +23,7 @@ public class BulletImplTest {
 
     @Before
     public void setUp() throws Exception {
-        projectile = new BulletImpl(".45", 5, new Point2D.Double(500.0, 123.0));
+        this.projectile = new MissileImpl();
     }
 
     @After
@@ -76,5 +71,10 @@ public class BulletImplTest {
         final String expected = "creational.prototype.src.model.ProjectileImpl";
         Assert.assertSame(clone.getClass().getName(), expected);
     }
-}
 
+    @Test
+    public void testCreate() throws Exception {
+        final MissileImpl missile = new MissileImpl();
+        Assert.assertNotNull(missile);
+    }
+}

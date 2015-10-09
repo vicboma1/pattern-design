@@ -45,4 +45,5 @@ public class GameTest {
         assertEquals("Not level 3D", expectedLevel.getClass(), level.getClass());
         assertEquals("Not Model", expectedModel.getClass(), resource.getClass());
     }
+
 }

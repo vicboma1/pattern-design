@@ -1,12 +1,9 @@
 package creational.multiton.src;
 
 import creational.multiton.api.Multiton;
-import creational.multiton.src.model.AudioContainer;
-import creational.multiton.src.model.MenuContainer;
-import creational.multiton.src.model.SceneContainer;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class ManagerContainerTest {
 
@@ -29,4 +26,38 @@ public class ManagerContainerTest {
         assertEquals("fail instance", sceneContainer, getSceneContainer);
 
     }
+
+    @Test
+      public void testGetNotNull() throws Exception {
+        final Multiton getAudioContainer = ManagerContainer.getInstance(AudioContainer.class);
+        assertNotNull("Create instance", getAudioContainer);
+    }
+
+    @Test
+    public void testGetInstantiationException() throws Exception {
+         Multiton getAudioContainer = null;
+        try {
+           getAudioContainer = ManagerContainer.getInstance(MultitionAbstract.class);
+        }
+        catch(InstantiationException e){
+            assertNull("Create instance", getAudioContainer);
+        }
+
+    }
+
+
+    public abstract class MultitionAbstract implements Multiton { }
+    public class AudioContainer implements Multiton {
+        public AudioContainer() {
+        }
+    }
+    public class MenuContainer implements Multiton {
+        public MenuContainer() {
+        }
+    }
+    public class SceneContainer implements Multiton {
+        public SceneContainer() {
+        }
+    }
+
 }

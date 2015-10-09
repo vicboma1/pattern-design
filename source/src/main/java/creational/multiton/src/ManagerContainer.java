@@ -1,7 +1,7 @@
 package creational.multiton.src;
 
-import creational.multiton.api.Multiton;
-
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class ManagerContainer {
 
-    private static final Map<Class<? extends Multiton>, Multiton> instancesMap = new HashMap();
+    private static Map<Class, Object> instancesMap = new HashMap();
 
     private ManagerContainer() {
         super();
@@ -22,21 +22,34 @@ public class ManagerContainer {
      * @param key Object
      * @return
      */
-    public static <T extends Class<? extends Multiton>> Multiton getInstance(T key) {
+    public static <T> T getInstance(final Class<T> key) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         synchronized (instancesMap) {
-            Multiton instance = instancesMap.get(key);
+           Object instance = instancesMap.get(key);
             if (instance == null) {
-                try {
+                Class< ? > enclosingClass = key.getEnclosingClass();
+                if (enclosingClass != null) {
+                    instance = findIntance(key, instance, enclosingClass);
+                } else
                     instance = key.newInstance();
-                } catch (InstantiationException e) {
-                    e.printStackTrace();
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } finally {
-                    instancesMap.put(key, instance);
-                }
+
+                instancesMap.put(key,instance);
             }
-            return instance;
+            return (T) instance;
         }
+    }
+
+    private static <T> Object findIntance(Class<T> key, Object instance, Class<?> enclosingClass) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+        Object instanceOfEnclosingClass = getInstance(enclosingClass);
+        Constructor<T> ctor = null;
+        try {
+            ctor = key.getConstructor(enclosingClass);
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+
+        if (ctor != null)
+            instance = ctor.newInstance(instanceOfEnclosingClass);
+
+        return instance;
     }
 }

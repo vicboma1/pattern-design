@@ -14,6 +14,8 @@ import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
 
 /**
  * Created with IntelliJ IDEA.
@@ -100,5 +102,13 @@ public class GunTest {
         assertNotEquals("fail missile", missile2, missile3);
         assertNotEquals("fail missile", missile2, missile4);
         assertNotEquals("fail missile", missile3, missile4);
+    }
+
+    @Test
+    public void testCharger() throws Exception {
+        final int _charger = 100;
+        final Gun<Projectile> spy = spy(gun);
+        spy.charger(_charger);
+        verify(spy).charger(_charger);
     }
 }

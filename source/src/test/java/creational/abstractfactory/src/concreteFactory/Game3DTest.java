@@ -31,4 +31,5 @@ public class Game3DTest {
         final Resource resource = game3D.createResource();
         assertEquals("Not create resource", expected.getClass(), resource.getClass());
     }
+
 }

@@ -10,24 +10,17 @@ public class LazyInitialization {
 
     private static Map<Class<?>, Object> mapObjects = new ConcurrentHashMap();
 
-    public static <T> T getObjectByClass(Class<? extends T> clazz) {
+    public static <T> T getObjectByClass(Class<? extends T> clazz) throws IllegalAccessException, InstantiationException {
         T newObject = null;
 
         if (!mapObjects.containsKey(clazz)) {
             synchronized (mapObjects) {
-
-                try {
-                    newObject = clazz.newInstance();
-                } catch (InstantiationException e) {
-                    e.printStackTrace();
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } finally {
-                    mapObjects.put(clazz, newObject);
-                }
+                newObject = clazz.newInstance();
+                mapObjects.put(clazz, newObject);
             }
-        } else
-            newObject = (T) mapObjects.get(clazz);
+        }
+            else
+                newObject = (T) mapObjects.get(clazz);
 
         return newObject;
     }

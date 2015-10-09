@@ -12,6 +12,9 @@ import java.util.Map;
  * Created by vicboma on 13/06/14.
  */
 public class FactoryProjectile {
+    public FactoryProjectile() {
+    }
+
     private static Map<String, Projectile> prototypes = new HashMap() {
         {
             put("Missile", new MissileImpl());
