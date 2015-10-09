@@ -11,10 +11,18 @@ cache:
 jdk:
   - oraclejdk8
 
+before_install:
+  - ccache -s
+  - pip install --upgrade pip
+  # setup X11 for the tests
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
 script:
   - jdk_switcher use oraclejdk8
+  - Djava.awt.headless=true
   - mvn test -f ./source/pom.xml
 
 after_success:
   - cd source
-  - mvn clean test saga:coverage cobertura:cobertura coveralls:report
+  - mvn clean test cobertura:cobertura coveralls:report
