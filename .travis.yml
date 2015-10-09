@@ -12,8 +12,6 @@ jdk:
   - oraclejdk8
 
 before_install:
-  - ccache -s
-  - pip install --upgrade pip
   # setup X11 for the tests
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
