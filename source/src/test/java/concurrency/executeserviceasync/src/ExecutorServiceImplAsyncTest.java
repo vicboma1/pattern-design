@@ -262,8 +262,6 @@ public class ExecutorServiceImplAsyncTest {
         final List<Integer> results = new ArrayList() {
             {
                 add(new Integer(0));
-                add(new Integer(10));
-                add(new Integer(100));
             }
         };
 
@@ -273,20 +271,6 @@ public class ExecutorServiceImplAsyncTest {
                     @Override
                     public Integer call() throws Exception {
                         return results.get(0);
-                    }
-                });
-
-                add(new Callable<Integer>() {
-                    @Override
-                    public Integer call() throws Exception {
-                        return results.get(1);
-                    }
-                });
-
-                add(new Callable<Integer>() {
-                    @Override
-                    public Integer call() throws Exception {
-                        return results.get(2);
                     }
                 });
             }
