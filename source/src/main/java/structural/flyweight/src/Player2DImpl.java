@@ -16,7 +16,7 @@ public class Player2DImpl implements Player2D {
         return new Player2DImpl(actor);
     }
 
-    Player2DImpl(Actor actor) {
+    public Player2DImpl(Actor actor) {
         this.actor = actor;
         this.position = Vector2D.ZERO();
     }

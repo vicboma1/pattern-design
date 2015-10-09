@@ -1,4 +1,4 @@
-package creational.abstractfactory.src.level;
+package structural.composite.src;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -12,7 +12,7 @@ import static org.mockito.Mockito.verify;
 /**
  * Created by vicboma on 09/10/15.
  */
-public class LevelTest {
+public class LevelCompisteTest {
 
     public static final String WORLD_1 = "World1";
     private structural.composite.src.Level level;

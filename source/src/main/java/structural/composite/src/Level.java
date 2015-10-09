@@ -8,6 +8,7 @@ import structural.composite.api.Context;
 public class Level implements Context {
     private String name;
 
+
     public Level(String name) {
         this.name = name;
     }

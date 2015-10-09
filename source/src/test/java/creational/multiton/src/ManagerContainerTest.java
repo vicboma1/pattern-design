@@ -45,6 +45,11 @@ public class ManagerContainerTest {
 
     }
 
+    @Test
+    public void testCreate() throws Exception {
+        ManagerContainer managerContainer = new ManagerContainer();
+        assertNotNull(managerContainer);
+    }
 
     public abstract class MultitionAbstract implements Multiton { }
     public class AudioContainer implements Multiton {

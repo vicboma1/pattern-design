@@ -16,10 +16,12 @@ public class Vector2DImpl implements Vector2D {
     }
 
     public Vector2DImpl(Point2D.Double point2d) {
+        this();
         this.point2d = point2d;
     }
 
     public Vector2DImpl(Vector2D vector2D) {
+        this();
         this.point2d.x = vector2D.x();
         this.point2d.y = vector2D.y();
     }
@@ -55,6 +57,7 @@ public class Vector2DImpl implements Vector2D {
         return Math.sqrt(x * x + y * y);
     }
 
+    @Override
     public Double theta() {
         return Math.atan2(this.point2d.y, this.point2d.x);
     }

@@ -11,6 +11,8 @@ import java.util.stream.IntStream;
 import static junit.framework.TestCase.assertNull;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
 
 public class ObjectPoolImplTest {
 
@@ -29,7 +31,7 @@ public class ObjectPoolImplTest {
         assertNotEquals("fail checkOut", particle1, particle2);
     }
 
-  /*  @Test
+    @Test
     public void testCheckIn() throws Exception {
         final ParticlePool particlePoolSpy = spy(particlePool);
 
@@ -37,7 +39,7 @@ public class ObjectPoolImplTest {
         particlePoolSpy.checkIn(particle1);
 
         verify(particlePoolSpy).checkIn(particle1);
-    }*/
+    }
 
     @Test
     public void testCreation() throws Exception {

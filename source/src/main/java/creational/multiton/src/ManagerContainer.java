@@ -12,7 +12,7 @@ public class ManagerContainer {
 
     private static Map<Class, Object> instancesMap = new HashMap();
 
-    private ManagerContainer() {
+    public ManagerContainer() {
         super();
     }
 

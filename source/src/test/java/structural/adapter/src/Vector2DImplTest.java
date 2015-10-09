@@ -4,18 +4,22 @@ import org.junit.Before;
 import org.junit.Test;
 import structural.adapter.api.Vector2D;
 
+import java.awt.geom.Point2D;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
 public class Vector2DImplTest {
 
+    public static final double X = 100.0;
     private Vector2D vector2D;
 
     @Before
     public void setUp() throws Exception {
-        vector2D = new Vector2DImpl(100.0, 100.0);
+        vector2D = new Vector2DImpl(X, X);
     }
 
     @Test
@@ -112,4 +116,48 @@ public class Vector2DImplTest {
         final String str = this.vector2D.toString();
         assertEquals("fail toString", expected, str);
     }
+
+    @Test
+    public void testCreate() throws Exception {
+        final Vector2D vector2D = new Vector2DImpl();
+        assertNotNull("null value", vector2D);
+
+    }
+
+    @Test
+    public void testCreate2() throws Exception {
+        final Vector2D vector2D = new Vector2DImpl(X,X);
+        assertNotNull("null value",vector2D);
+
+    }
+
+    @Test
+    public void testCreate3() throws Exception {
+        final Vector2D vector2D = new Vector2DImpl(X);
+        assertNotNull("null value",vector2D);
+
+    }
+    @Test
+    public void testCreate4() throws Exception {
+        final Vector2D v = new Vector2DImpl(X);
+        final Vector2D vector2D = new Vector2DImpl(v);
+        assertNotNull("null value",vector2D);
+
+    }
+    @Test
+    public void testCreate5() throws Exception {
+        Point2D.Double pdouble = new Point2D.Double(X,X);
+        final Vector2D vector2D = new Vector2DImpl(pdouble);
+        assertNotNull("null value", vector2D);
+    }
+
+    @Test
+    public void testDot() throws Exception {
+        Vector2DImpl vector2D = new Vector2DImpl();
+        final Vector2D dot = vector2D.dot(vector2D);
+        assertEquals(dot.x().intValue(), 0);
+        assertEquals(dot.y().intValue(), 0);
+    }
+
+
 }
