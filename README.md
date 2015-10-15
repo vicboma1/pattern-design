@@ -26,11 +26,13 @@ Pattern Design (Java)
   * ```Bridge```
   * ```Composite```
   * ```Front Controller```
+  * [ Decorator](https://github.com/vicboma1/ClassicDecoratorPattern)
+  
 
 * [Behavioral patterns](https://github.com/vicboma1/pattern-design/tree/master/source/src/main/java/behavioral) / [Test](https://github.com/vicboma1/pattern-design/tree/master/source/src/test/java/behavioral)
   * ```Observer```
   * ```Command```
-  * [Actioner](https://github.com/vicboma1/CommandMapper)
+  *  [Actioner](https://github.com/vicboma1/CommandMapper)
   
 
 * [Concurrency patterns](https://github.com/vicboma1/pattern-design/tree/master/source/src/main/java/concurrency) / [Test](https://github.com/vicboma1/pattern-design/tree/master/source/src/test/java/concurrency)
