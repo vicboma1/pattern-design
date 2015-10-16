@@ -58,12 +58,13 @@ Pattern Design (Java)
   * Automatic To Singleton
 
 
-  References:
+  #References:
   * Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. http://en.wikipedia.org/wiki/Design_Patterns_(book)
   * Kent Beck, Ward Cunningham. http://c2.com/doc/oopsla87.html
   * Martin, Robert C. http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf
   * Fowler, Martin. http://www.martinfowler.com/articles/writingPatterns.html
   * Staffan Bjork, Jussi Holopainen. Patterns in game design (Book).
+  * My own knowledge
    
 
 
