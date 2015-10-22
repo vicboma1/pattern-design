@@ -27,7 +27,7 @@ Pattern Design (Java)
   * ```Composite```
   * ```Front Controller```
   * [ Decorator](https://github.com/vicboma1/ClassicDecoratorPattern)
-  
+  * [ Facade](https://github.com/vicboma1/FacadePattern)
 
 * [Behavioral patterns](https://github.com/vicboma1/pattern-design/tree/master/source/src/main/java/behavioral) / [Test](https://github.com/vicboma1/pattern-design/tree/master/source/src/test/java/behavioral)
   * ```Observer```
