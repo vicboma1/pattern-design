@@ -65,6 +65,7 @@ Pattern Design (Java)
   * Martin, Robert C. http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf
   * Fowler, Martin. http://www.martinfowler.com/articles/writingPatterns.html
   * Staffan Bjork, Jussi Holopainen. Patterns in game design (Book).
+  * Mark Seemann, http://blog.ploeh.dk
   * My own knowledge 
    
 
