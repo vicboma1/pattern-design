@@ -1,6 +1,6 @@
 Pattern Design (Java)
 ==============
-[![Build Status](https://travis-ci.org/vicboma1/pattern-design.svg)](https://travis-ci.org/vicboma1/pattern-design)
+![](https://img.shields.io/badge/Java-1.8-blue.svg?style=plastic?logoWidth=40) [![Build Status](https://travis-ci.org/vicboma1/pattern-design.svg)](https://travis-ci.org/vicboma1/pattern-design)
 [![Coverage Status](https://coveralls.io/repos/vicboma1/pattern-design/badge.svg?branch=master&service=github)](https://coveralls.io/github/vicboma1/pattern-design?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vicboma1/pattern-design/trend.png)](https://bitdeli.com/free "Bitdeli Badge")[![Analytics](https://ga-beacon.appspot.com/UA-68658653-1/pattern-design/readme)](https://github.com/igrigorik/ga-beacon)
