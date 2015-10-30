@@ -57,7 +57,7 @@ Pattern Design (Java)
   * Automatic As Singleton 
   * Automatic To Singleton
 
-* Service Locator - WIP
+* [Service Locator](https://github.com/vicboma1/ServiceLocator)
 
   #References:
   * Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. http://en.wikipedia.org/wiki/Design_Patterns_(book)
