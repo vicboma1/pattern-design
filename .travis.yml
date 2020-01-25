@@ -12,17 +12,9 @@ cache:
 os:
   - linux
 
-# setup jobs.
-env:
-  - USE_FRAMEBUFFER=true
-
-# run on xvfb screen.
 before_install:
-  - if [ $USE_FRAMEBUFFER = "true" ]; then export DISPLAY=:99.0 && sh -e /etc/init.d/xvfb start; fi
-
-# skip install stage.
-install: true
-
+  export DISPLAY=:99.0 && sh -e /etc/init.d/xvfb start; fi
+  
 script:
   - mvn test -f ./source/pom.xml
 
