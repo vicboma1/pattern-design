@@ -12,9 +12,6 @@ cache:
 os:
   - linux
 
-jdk:
-  - oraclejdk8
-
 # setup jobs.
 env:
   - USE_FRAMEBUFFER=true
@@ -27,7 +24,6 @@ before_install:
 install: true
 
 script:
-  - jdk_switcher use oraclejdk8
   - mvn test -f ./source/pom.xml
 
 after_success:
