@@ -20,6 +20,7 @@ script:
 after_success:
   - cd source
   - mvn clean test cobertura:cobertura coveralls:report
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=vicboma1_pattern-design
   
 addons:
   sonarcloud:
