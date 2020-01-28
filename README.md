@@ -4,7 +4,7 @@ Pattern Design (Java)
 [![Coverage Status](https://coveralls.io/repos/vicboma1/pattern-design/badge.svg?branch=master&service=github)](https://coveralls.io/github/vicboma1/pattern-design?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/)
 [![Analytics](https://ga-beacon.appspot.com/UA-68658653-1/pattern-design/readme)](https://github.com/igrigorik/ga-beacon)
-
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=vicboma1_pattern-design&metric=alert_status)](https://sonarcloud.io/dashboard/index/vicboma1_pattern-design)
 
 * [Creational patterns](https://github.com/vicboma1/pattern-design/tree/master/source/src/main/java/creational) / [Test](https://github.com/vicboma1/pattern-design/tree/master/source/src/test/java/creational)
   * ```Builder```
